@@ -8,7 +8,6 @@ data = loadJSON('kevinbacon.json');
 function setup() {
  graph = new Graph();
   noCanvas();
- console.log(data);
 
  var movies = data.movies;
 
@@ -20,9 +19,12 @@ function setup() {
 
  for (var j = 0; j < cast.length; j++) {
   var actor = cast[j];
-  console.log(actor)
+  var actorNode = new Node(actor);
+  graph.addNode(actorNode);
 }
  }
+
+ console.log(graph)
 }
 
 

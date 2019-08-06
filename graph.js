@@ -23,3 +23,11 @@ function Graph() {
   this.nodes = [];
   this.graph = {}; // will be hash table
 };
+
+Graph.prototype.addNode = function(n) {
+  //Node into array
+  this.nodes.push(n);
+  var title = n.value;
+  //Node into "hash"
+  this.graph[title] = n;
+}

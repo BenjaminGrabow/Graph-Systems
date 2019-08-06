@@ -12,12 +12,3 @@
 // Edge = []
 // searched - true or false 
 // parent (keep track of parents)
-
-// constructor function for node object 
-
-function Node() {
-  this.value = value;
-  this.edges = [];
-  this.searched = false;
-  this.parent = null;
-}

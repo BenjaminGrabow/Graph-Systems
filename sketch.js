@@ -19,7 +19,11 @@ function setup() {
 
  for (var j = 0; j < cast.length; j++) {
   var actor = cast[j];
-  var actorNode = new Node(actor);
+  var actorNode = graph.getNode(actor);
+  if(actorNode === undefined) {
+    var actorNode = new Node(actor);
+  }
+
   graph.addNode(actorNode);
 
   movieNode.addEdge(actorNode);

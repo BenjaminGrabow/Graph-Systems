@@ -7,6 +7,6 @@ function Node(value) {
   this.parent = null;
 }
 
-Node.prototype.addEdge(neighbor) {
+Node.prototype.addEdge = function(neighbor) {
   this.edges.push(neighbor);
 }

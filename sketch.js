@@ -15,8 +15,13 @@ function setup() {
  for ( var i = 0; i < movies.length; i++){
  var movie = movies[i].title;
  var cast = movies[i].cast;
- var n = new Node(movies);
- graph.newNode(n);
+ var n = new Node(movie);
+ graph.addNode(n);
+
+ for (var j = 0; j < cast.length; j++) {
+  var actor = cast[j];
+  console.log(actor)
+}
  }
 }
 

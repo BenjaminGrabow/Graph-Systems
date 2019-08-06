@@ -22,9 +22,23 @@
 function Graph() {
   this.nodes = [];
   this.graph = {}; // will be hash table
+  this.end = null;
+  this.start = null;
 };
 
-Graph.prototype.addNode = function(n) {
+Graph.prototype.setStart = function(actor) {
+  this.start = this.graph[actor];
+  
+  return this.start;
+}
+
+Graph.prototype.setEnd = function(actor) {
+  this.end = this.graph[actor];
+
+  return this.end;
+}
+
+Graph.prototype.addNode = function (n) {
   //Node into array
   this.nodes.push(n);
   var title = n.value;
@@ -32,7 +46,7 @@ Graph.prototype.addNode = function(n) {
   this.graph[title] = n;
 }
 
-Graph.prototype.getNode = function(actor) {
- var n = this.graph[actor];
- return n;
+Graph.prototype.getNode = function (actor) {
+  var n = this.graph[actor];
+  return n;
 }

@@ -7,6 +7,8 @@ function Node(value) {
   this.parent = null;
 }
 
-Node.prototype.addEdge = function(neighbor) {
+Node.prototype.addEdge = function (neighbor) {
   this.edges.push(neighbor);
+  // booth directions
+  neighbor.edges.push(this);
 }

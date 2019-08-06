@@ -12,3 +12,9 @@
 // Edge = []
 // searched - true or false 
 // parent (keep track of parents)
+
+
+// Graph Object:
+//stores: 
+// nodes = [] (all nodes);
+// graph = {} (stores data structure about node - hash table)

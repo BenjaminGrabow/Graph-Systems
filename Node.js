@@ -6,3 +6,7 @@ function Node(value) {
   this.searched = false;
   this.parent = null;
 }
+
+Node.prototype.addEdge(neighbor) {
+  this.edges.push(neighbor);
+}

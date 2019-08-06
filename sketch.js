@@ -14,13 +14,15 @@ function setup() {
  for ( var i = 0; i < movies.length; i++){
  var movie = movies[i].title;
  var cast = movies[i].cast;
- var n = new Node(movie);
- graph.addNode(n);
+ var movieNode = new Node(movie);
+ graph.addNode(movieNode);
 
  for (var j = 0; j < cast.length; j++) {
   var actor = cast[j];
   var actorNode = new Node(actor);
   graph.addNode(actorNode);
+
+  movieNode.addEdge(actorNode);
 }
  }
 
